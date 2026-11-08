@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIKSHA STORE 09 - VIP Store</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0c;
+            color: #ffffff;
+            padding: 20px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Floating Animation */
+        @keyframes vipFloat {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Glow Pulse Animation */
+        @keyframes vipGlow {
+            0% { text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055; }
+            50% { text-shadow: 0 0 15px #ff00aa, 0 0 30px #ff00aa; }
+            100% { text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055; }
+        }
+
+        .store-header {
+            font-size: 26px;
+            font-weight: 900;
+            color: #ff0055;
+            animation: vipFloat 3s ease-in-out infinite, vipGlow 2s infinite;
+            margin-bottom: 15px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .notice-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #ff0055;
+            padding: 12px;
+            font-size: 13px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            max-width: 380px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(255, 0, 85, 0.2);
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #00f0ff;
+            margin: 25px 0 15px 0;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #00f0ff;
+            animation: vipFloat 4s ease-in-out infinite;
+        }
+
+        .app-card {
+            background: #141419;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 15px;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 380px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+
+        /* Floating App Titles */
+        .app-title {
+            font-size: 19px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 12px;
+            animation: vipFloat 3s ease-in-out infinite;
+            display: inline-block;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        }
+
+        .download-btn {
+            display: block;
+            width: 100%;
+            padding: 12px 0;
+            background: linear-gradient(90deg, #ff0055, #ff5500);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4);
+            transition: 0.3s;
+        }
+
+        .download-btn:active {
+            transform: scale(0.96);
+        }
+
+        /* 18+ Section Special Styling */
+        .adult-section {
+            border: 2px solid #ff0000;
+            border-radius: 16px;
+            padding: 15px;
+            max-width: 380px;
+            width: 100%;
+            background: rgba(255, 0, 0, 0.03);
+            margin-top: 20px;
+        }
+
+        .adult-header {
+            color: #ff0000;
+            font-size: 22px;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 15px;
+            animation: vipFloat 2.5s ease-in-out infinite, vipGlow 1.5s infinite;
+        }
+
+        .adult-card .download-btn {
+            background: linear-gradient(90deg, #dc2626, #991b1b);
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5);
+        }
+
+        /* Social VIP Links */
+        .social-section {
+            width: 100%;
+            max-width: 380px;
+            margin-top: 35px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px;
+            border-radius: 12px;
+            color: white;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 16px;
+            animation: vipFloat 3.5s ease-in-out infinite;
+        }
+
+        .telegram-btn {
+            background: linear-gradient(90deg, #0088cc, #00bfff);
+            box-shadow: 0 0 15px rgba(0, 136, 204, 0.5);
+        }
+
+        .insta-btn {
+            background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
+            box-shadow: 0 0 15px rgba(253, 29, 29, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="store-header">
+        DIKSHA STORE 09 VIP
+    </div>
+
+    <!-- Notice -->
+    <div class="notice-box">
+        Update aane par app delete na karein, online update ho jayegi.
+    </div>
+
+    <!-- MAIN APPS SECTION -->
+    <div class="section-title">--- PREMIUM APPS ---</div>
+
+    <!-- 1. Pocket FM -->
+    <div class="app-card">
+        <img class="banner-img" src="https://i.ibb.co/bMyB1b9v/IMG-2e37390f-5416-4c05-a0b2-92c5845a6b82.jpg" alt="Banner">
+        <div class="app-title">POCKET FM PREMIUM</div>
+        <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+    </div>
+
+    <!-- 2. Kuku TV -->
+    <div class="app-card">
+        <img class="banner-img" src="https://i.ibb.co/W4gVfVc0/IMG-948bd26f-6604-4efe-b6cd-3e8c717bcd1b.jpg" alt="Banner">
+        <div class="app-title">KUKU TV PREMIUM</div>
+        <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+    </div>
+
+    <!-- 3. Quik TV -->
+    <div class="app-card">
+        <img class="banner-img" src="https://i.ibb.co/TqBtYmcd/IMG-a3c52f4c-e8b0-4c56-a2c8-90e37c18ff25.jpg" alt="Banner">
+        <div class="app-title">QUIK TV PREMIUM</div>
+        <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+    </div>
+
+    <!-- 4. Story TV -->
+    <div class="app-card">
+        <img class="banner-img" src="https://i.ibb.co/YswNK3m/IMG-26f7afd0-86dc-457f-8ee9-ed9309d0cf1f.png" alt="Banner">
+        <div class="app-title">STORY TV PREMIUM</div>
+        <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+    </div>
+
+    <!-- 5. Net Short -->
+    <div class="app-card">
+        <img class="banner-img" src="https://i.ibb.co/CK7C2H12/IMG-b64fb8c2-8907-4b37-9280-757e580babe3.jpg" alt="Banner">
+        <div class="app-title">NET SHORT PREMIUM</div>
+        <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+    </div>
+
+    <!-- 6. Dash Reel -->
+    <div class="app-card">
+        <img class="banner-img" src="https://i.ibb.co/8DdVtRfz/IMG-2cbc2dc4-6be6-48e8-b0f1-920aad84bc8c.jpg" alt="Banner">
+        <div class="app-title">DASH REEL PREMIUM</div>
+        <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+    </div>
+
+    <!-- 7. Anime TV -->
+    <div class="app-card">
+        <img class="banner-img" src="https://via.placeholder.com/350x140/6366f1/ffffff?text=ANIME+TV" alt="Banner">
+        <div class="app-title">ANIME TV PREMIUM</div>
+        <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+    </div>
+
+    <!-- 8. Rigi TV -->
+    <div class="app-card">
+        <img class="banner-img" src="https://via.placeholder.com/350x140/14b8a6/ffffff?text=RIGI+TV" alt="Banner">
+        <div class="app-title">RIGI TV PREMIUM</div>
+        <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+    </div>
+
+    <!-- 9. Apple TV -->
+    <div class="app-card">
+        <img class="banner-img" src="https://via.placeholder.com/350x140/333333/ffffff?text=APPLE+TV" alt="Banner">
+        <div class="app-title">APPLE TV PREMIUM</div>
+        <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+    </div>
+
+    <!-- 10. Prime Video -->
+    <div class="app-card">
+        <img class="banner-img" src="https://via.placeholder.com/350x140/00a8e1/ffffff?text=PRIME+VIDEO" alt="Banner">
+        <div class="app-title">PRIME VIDEO PREMIUM</div>
+        <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+    </div>
+
+    <!-- 11. Vertigo TV -->
+    <div class="app-card">
+        <img class="banner-img" src="https://via.placeholder.com/350x140/a855f7/ffffff?text=VERTIGO+TV" alt="Banner">
+        <div class="app-title">VERTIGO TV PREMIUM</div>
+        <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+    </div>
+
+    <!-- 12. Drama Wave -->
+    <div class="app-card">
+        <img class="banner-img" src="https://via.placeholder.com/350x140/ef4444/ffffff?text=DRAMA+WAVE" alt="Banner">
+        <div class="app-title">DRAMA WAVE PREMIUM</div>
+        <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+    </div>
+
+    <!-- 13. Alight Motion -->
+    <div class="app-card">
+        <img class="banner-img" src="https://via.placeholder.com/350x140/22c55e/ffffff?text=ALIGHT+MOTION" alt="Banner">
+        <div class="app-title">ALIGHT MOTION PREMIUM</div>
+        <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+    </div>
+
+    <!-- 14. Fake Paytm -->
+    <div class="app-card">
+        <img class="banner-img" src="https://via.placeholder.com/350x140/002e6e/ffffff?text=FAKE+PAYTM" alt="Banner">
+        <div class="app-title">FAKE PAYTM PREMIUM</div>
+        <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+    </div>
+
+    <!-- 15. Reelies App -->
+    <div class="app-card">
+        <img class="banner-img" src="https://via.placeholder.com/350x140/e11d48/ffffff?text=REELIES+APP" alt="Banner">
+        <div class="app-title">REELIES APP PREMIUM</div>
+        <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+    </div>
+
+    <!-- 16. Netflix -->
+    <div class="app-card">
+        <img class="banner-img" src="https://via.placeholder.com/350x140/e50914/ffffff?text=NETFLIX" alt="Banner">
+        <div class="app-title">NETFLIX PREMIUM</div>
+        <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+    </div>
+
+    <!-- 17. Workout App -->
+    <div class="app-card">
+        <img class="banner-img" src="https://via.placeholder.com/350x140/84cc16/ffffff?text=WORKOUT+APP" alt="Banner">
+        <div class="app-title">WORKOUT APP PREMIUM</div>
+        <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+    </div>
+
+
+    <!-- 18+ VIP SECTION -->
+    <div class="adult-section">
+        <div class="adult-header">ONLY 18+ VISIT</div>
+
+        <!-- 1. Cine18+ -->
+        <div class="app-card adult-card">
+            <img class="banner-img" src="https://via.placeholder.com/350x140/991b1b/ffffff?text=CINE18%2B" alt="Banner">
+            <div class="app-title">CINE18+ PREMIUM</div>
+            <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+        </div>
+
+        <!-- 2. Green Masti 18+ -->
+        <div class="app-card adult-card">
+            <img class="banner-img" src="https://via.placeholder.com/350x140/15803d/ffffff?text=GREEN+MASTI+18%2B" alt="Banner">
+            <div class="app-title">GREEN MASTI 18+ PREMIUM</div>
+            <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+        </div>
+
+        <!-- 3. Mood X 18+ -->
+        <div class="app-card adult-card">
+            <img class="banner-img" src="https://via.placeholder.com/350x140/b91c1c/ffffff?text=MOOD+X+18%2B" alt="Banner">
+            <div class="app-title">MOOD X 18+ PREMIUM</div>
+            <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+        </div>
+
+        <!-- 4. Moovlix 18+ -->
+        <div class="app-card adult-card">
+            <img class="banner-img" src="https://via.placeholder.com/350x140/7c2d12/ffffff?text=MOOVLIX+18%2B" alt="Banner">
+            <div class="app-title">MOOVLIX 18+ PREMIUM</div>
+            <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+        </div>
+
+        <!-- 5. Stream Luna 18+ -->
+        <div class="app-card adult-card">
+            <img class="banner-img" src="https://via.placeholder.com/350x140/4c1d95/ffffff?text=STREAM+LUNA+18%2B" alt="Banner">
+            <div class="app-title">STREAM LUNA 18+ PREMIUM</div>
+            <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+        </div>
+
+        <!-- 6. Titlee 18+ -->
+        <div class="app-card adult-card">
+            <img class="banner-img" src="https://via.placeholder.com/350x140/be123c/ffffff?text=TITLEE+18%2B" alt="Banner">
+            <div class="app-title">TITLEE 18+ PREMIUM</div>
+            <a href="YOUR_LINK_HERE" class="download-btn">DOWNLOAD NOW</a>
+        </div>
+    </div>
+
+
+    <!-- SOCIAL FOOTER LINKS -->
+    <div class="social-section">
+        <a href="YOUR_TELEGRAM_LINK_HERE" class="social-btn telegram-btn" target="_blank">
+            JOIN TELEGRAM CHANNEL
+        </a>
+        <a href="YOUR_INSTAGRAM_LINK_HERE" class="social-btn insta-btn" target="_blank">
+            FOLLOW ON INSTAGRAM
+        </a>
+    </div>
+
+</body>
+</html>
+
